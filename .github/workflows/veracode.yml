@@ -24,6 +24,6 @@ jobs:
         with:
           appname: 'product-vas-fraud-api'
           createprofile: false
-          filepath: 'src'
+          filepath: 'product-vas-fraud-api.zip'
           vid: '${{ secrets.VERACODE_API_ID }}'
           vkey: '${{ secrets.VERACODE_API_KEY }}' 
