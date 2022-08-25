@@ -5,7 +5,7 @@ COPY --chown=node:node . .
 RUN chown node:node /home/node/catenax-api
 USER node
 RUN npm ci --no-optional --no-audit 
-RUN npm run lint 
+# RUN npm run lint 
 RUN npm run test
 RUN npm run build
 
