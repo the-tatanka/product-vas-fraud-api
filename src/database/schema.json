@@ -1,0 +1,56 @@
+[
+    {
+        "name": "fraudevents",
+        "columns": [
+            {
+                "name": "id",
+                "isNullable": false,
+                "hasDefault": true,
+                "typeId": 23,
+                "typeName": "INTEGER"
+            },
+            {
+                "name": "cdl_id",
+                "isNullable": false,
+                "hasDefault": false,
+                "typeId": 1042,
+                "typeName": "BPCHAR"
+            },
+            {
+                "name": "attack_date",
+                "isNullable": false,
+                "hasDefault": false,
+                "typeId": 20,
+                "typeName": "BIGINT"
+            },
+            {
+                "name": "country_code",
+                "isNullable": true,
+                "hasDefault": false,
+                "typeId": 1042,
+                "typeName": "BPCHAR"
+            },
+            {
+                "name": "fraudtype",
+                "isNullable": false,
+                "hasDefault": false,
+                "typeId": 16405,
+                "typeName": "EFRAUDTYPE"
+            },
+            {
+                "name": "created_at",
+                "isNullable": false,
+                "hasDefault": true,
+                "typeId": 1184,
+                "typeName": "TIMESTAMPTZ"
+            },
+            {
+                "name": "updated_at",
+                "isNullable": false,
+                "hasDefault": true,
+                "typeId": 1184,
+                "typeName": "TIMESTAMPTZ"
+            }
+        ]
+    }
+]
