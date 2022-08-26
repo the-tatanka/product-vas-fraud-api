@@ -4,7 +4,10 @@ WORKDIR /home/node/catenax-api
 COPY --chown=node:node . .
 RUN chown node:node /home/node/catenax-api
 USER node
-RUN npm ci --no-optional --no-audit && npm run lint && npm run test && npm run build
+RUN npm ci --no-optional --no-audit 
+# RUN npm run lint 
+RUN npm run test
+RUN npm run build
 
 # Stage 2: cleaner - prepare image without typescript and dev dependencies
 FROM node:14-alpine as cleaner
