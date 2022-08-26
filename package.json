@@ -10,7 +10,7 @@
         "predev": "npm run build",
         "dev": "node -r source-map-support/register .",
         "test": "./node_modules/.bin/mocha --exit --require ts-node/register --recursive --extension spec.ts ./test/"
-        "build:sources": "zip -r product-vas-fraud-api.zip cx-portal*/src package.json **/package.json yarn.lock -x '*.stories.*' -x '*.test.*' -x '*mock*' -x '*.ttf' -x '*.svg' -x '*.png'",
+       
     },
     "author": {
         "name": "Matthias Ernst",
