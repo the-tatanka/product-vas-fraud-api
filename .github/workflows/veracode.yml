@@ -38,6 +38,6 @@ jobs:
           appname: "product-vas-fraud-api"
           createprofile: false
           # Specify path to upload
-          filepath: "product-vas-fraud-api.zip"
+          filepath: "./src"
           vid: "${{ secrets.ORG_VERACODE_API_ID }}"
           vkey: "${{ secrets.ORG_VERACODE_API_KEY }}"
