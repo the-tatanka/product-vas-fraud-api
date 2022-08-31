@@ -7,7 +7,7 @@ The *Catena-X API* serves as a unified backend for the Dashboard frontend and as
 
 The minimal requirements to execute this program are
 
- - Node.js (version 14) - Javascript runtime environment and
+ - Node.js (version 16) - JavaScript runtime environment and
  - npm (version 8) - Node.js package manager.
 
 It can also be executed self-contained as a **Docker** container. In that case only the Docker engine is required:
