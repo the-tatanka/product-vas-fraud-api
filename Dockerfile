@@ -18,7 +18,7 @@ RUN npm ci --only=production --no-optional
 # Stage 3: final executable image
 FROM node:16-alpine
 
-ENV API_PORT=80
+ENV API_PORT=8080
 ENV CORS_ALLOW_ORIGIN=http://localhost:3000
 ENV DB_HOST=localhost
 ENV DB_PORT=5432
