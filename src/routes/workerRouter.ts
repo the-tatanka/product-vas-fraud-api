@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import bodyParser from 'body-parser';
 import Joi from 'joi';
-import { get, has } from 'lodash';
+import { get, toString } from 'lodash';
 import * as db from '../database/db';
 import { upsertFraudevents, validateFraudevent } from '../database/fraudevents';
 import OperationalError from '../errors';
@@ -205,10 +205,10 @@ function validateDeleteRequest(req: Request): Joi.ValidationResult<DeleteRequest
 }
 
 function apiKeyAuth(req: Request, _res: Response, next: NextFunction) {
-	if (!has(req, 'headers.x-api-key')) {
+	const workerApiKey:string = toString(get(req, 'headers.x-api-key'));
+	if (!workerApiKey) {
 		throw new OperationalError(401, "no API authorization provided (X-API-KEY)");
-	}
-	if (get(req, 'headers.x-api-key') !== cfg.WORKER_API_KEY) {
+	} else if (workerApiKey !== cfg.WORKER_API_KEY) {
 		throw new OperationalError(403, "authorization insufficient for this request");
 	}
 	next();
