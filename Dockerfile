@@ -29,7 +29,7 @@ ENV SENTRY_ENVIRONMENT=production
 ENV KEYCLOAK_REALM=CX-Central
 ENV KEYCLOAK_CLIENT_RESOURCE=Cl9-CDQ-Fraud
 ENV KEYCLOAK_CLIENT_ROLE=fraud_app_user
-ENV KEYCLOAK_AUTH_URL=https://catenaxintakssrv.germanywestcentral.cloudapp.azure.com/iamcentralidp/auth/realms/CX-Central/protocol/openid-connect/auth"
+ENV KEYCLOAK_AUTH_URL=https://catenaxintakssrv.germanywestcentral.cloudapp.azure.com/iamcentralidp/auth/realms/CX-Central/protocol/openid-connect/auth
 
 WORKDIR /home/node/catenax-api
 COPY --chown=node:node --from=cleaner /home/node/catenax-api ./
